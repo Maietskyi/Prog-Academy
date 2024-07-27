@@ -1,0 +1,24 @@
+package org.example;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var scanner = new Scanner(System.in);
+
+        System.out.println("Введіть вартість доставки за кілограм в гривнях");
+        var price = scanner.nextDouble();
+
+        while (true) {
+            System.out.println("Введіть вагу посилки в кілограмах");
+            var weight = scanner.nextDouble();
+
+            if (weight == 0)
+                break;
+
+            var resoult = weight * price;
+            System.out.println("Вартість доставки вантажу " + resoult + " грн.");
+        }
+
+    }
+}
